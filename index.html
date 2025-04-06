@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Divisor de Despesas</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Divisor de Despesas no Restaurante</h1>
+    <section id="setup" class="active">
+      <h2>1. Integrantes do grupo</h2>
+      <label for="numPessoas">Quantidade de pessoas:</label>
+      <input type="number" id="numPessoas" min="1" value="2" />
+      <button onclick="atualizarNomes()">Atualizar</button>
+      <div id="nomesContainer"></div>
+      <button onclick="avancarParaItens()">Próximo: Adicionar Itens</button>
+    </section>
+    <section id="itens">
+      <button onclick="mostrarEtapa('setup')">← Voltar</button>
+      <h2>2. Itens consumidos</h2>
+      <input type="text" id="itemNome" placeholder="Nome do item" />
+      <input type="number" id="itemValor" placeholder="Valor do item" step="0.01" />
+      <div id="consumidoresContainer"></div>
+      <button onclick="adicionarItem()">Adicionar Item</button>
+      <ul id="listaItens"></ul>
+      <div id="subtotais">
+        <h3>Subtotais</h3>
+        <ul id="subtotaisLista"></ul>
+        <p><strong>Total do grupo: R$<span id="totalGrupo">0.00</span></strong></p>
+      </div>
+      <button onclick="avancarParaTaxa()">Próximo: Taxa do Garçom</button>
+    </section>
+    <section id="taxas">
+      <button onclick="mostrarEtapa('itens')">← Voltar</button>
+      <h2>3. Taxa do garçom</h2>
+      <div id="taxaContainer"></div>
+      <button onclick="calcularTotais()">Calcular Totais</button>
+    </section>
+    <section id="resultado">
+      <button onclick="mostrarEtapa('taxas')">← Voltar</button>
+      <h2>Totais por pessoa</h2>
+      <ul id="totaisLista"></ul>
+      <p><strong>Total geral: R$<span id="totalFinal">0.00</span></strong></p>
+      <button onclick="recomecarApp()">Recomeçar</button>
+    </section>
+  </div>
+  <script src="js/scripts.js"></script>
+</body>
+</html>
