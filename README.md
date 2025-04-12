@@ -18,7 +18,7 @@ Este é um aplicativo web simples e interativo que ajuda grupos de pessoas a cal
 
 Este site está disponível via GitHub Pages:
 
-👉 [Acesse o site aqui](https://seibel27.github.io/divisao-depesas)
+👉 [Acesse o site aqui](https://seibel27.github.io/divisao-despesas)
 
 ## 📁 Estrutura
 
